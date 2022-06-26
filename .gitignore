@@ -1,6 +1,7 @@
 # Hugo build files
 /resources
 /public
+/assets/jsconfig.json
 .hugo_build.lock
 
 # OS files
