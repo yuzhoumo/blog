@@ -1,2 +1,15 @@
+# Hugo build files
 /resources
 /public
+.hugo_build.lock
+
+# OS files
+Thumbs.db
+.DS_Store
+._*
+
+# Editors
+.vscode
+*.swp
+tags
+
