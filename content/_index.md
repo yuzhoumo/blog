@@ -5,4 +5,7 @@ menu:
         weight: 1
         params:
             icon: home
+aliases:
+    - /blog
+    - /home
 ---
