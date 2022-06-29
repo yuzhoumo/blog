@@ -1,28 +1,50 @@
 ---
-title: About
-description: Hugo, the world's fastest framework for building websites
-date: '2019-02-28'
+title: about
+description: welcome to my corner of the web
+image: "sunset.png"
+links:
+  - title: YouTube Channel
+    description: Contains mostly old school projects and random videos
+    website: https://www.youtube.com/TheCreeperBrine
+    image: youtube.png
+  - title: Spotify Profile
+    description: My favorite genres are deep house, trance, synthwave, and lofi
+    website: https://open.spotify.com/user/ae4qzwqynu120mdqdg2h4s7ds
+    image: spotify.png
+  - title: Steam Profile
+    description: A testimate to the hours wasted in the  ~m e t a v e r s e~
+    website: https://steamcommunity.com/id/PerpetualPanda/
+    image: steam.png
 menu:
-    main: 
+    main:
         weight: 2
         params:
             icon: user
+comments: false
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Hey there, I'm Joe! I'm studying Computer Science and Data Science at
+[UC Berkeley](https://www.berkeley.edu/). This summer, I'm working at
+[Aruba Networks](https://www.arubanetworks.com/) as a software engineer.
 
-Hugo makes use of a variety of open source projects including:
+I'm passionate about technology and deeply concerned about its ethical use.
+My long-term goals are to be mindful of the impact I make as a developer, to
+never stop learning, and to share my experiences with others. In our digitized
+world, public understanding of the software we depend on is crucial for a free
+and open society.
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+This site is primarily a place for me to organize my thoughts and share what
+I'm working on. If you'd like, give my blog a glance and maybe you'll find
+something interesting!
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+### contact me
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
+```
+Email     |  contact[at]joemo.dev
+Discord   |  jo3_mo#4227
+Telegram  |  @jo3_mo
+Session   |  05bb75f6fce7c883e309e4672a3d6199ddf756d238155d459aac6b26bb32348771
+```
 
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Feel free to reach me via any of the listed methods. However, I prefer
+[Signal](https://www.signal.org/) if you'd like to share your number!

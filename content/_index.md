@@ -1,10 +1,10 @@
 ---
 menu:
     main:
-        name: Home
+        name: blog
         weight: 1
         params:
-            icon: home
+            icon: notebook
 aliases:
     - /blog
     - /home
