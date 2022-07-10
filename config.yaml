@@ -100,7 +100,7 @@ menu:
 
     social:
         - identifier: linkedin
-          name: Twitter
+          name: LinkedIn
           url: https://linkedin.com/in/yuzhoumo
           weight: 3
           params:
