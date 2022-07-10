@@ -1,8 +1,11 @@
 ---
 author: Joe Mo
 title: Layover Limbo
+description: Living in the space between home and destination
 date: 2022-07-03
-description: I'm not stupid. I... I'm a Stoic! ...Right?
+image: airplane.jpg
+categories: [Journal]
+tags: [journal, travel, philosophy]
 ---
 
 So I purchased flights from San Francisco to Newark with 26 hours of layovers
@@ -37,12 +40,10 @@ anything other than getting from point A to point B, just free time to think.
 
 It's a good opportunity to write blog posts like this one, to reflect on life,
 to plan and get motivated to start new personal projects upon arriving home.
-Not only are you physically and mentally miles away from your home but also
-miles away from your destination. It's in this liminal space that thoughts
-can flow unhindered both by daily and travel tasks.
+Not only am I physically and mentally miles away from your home but also miles
+away from my destination. It's in this liminal space that thoughts can flow
+unhindered by day-to-day or travel-related tasks.
 
-To purposefully subject myself to 
-
-So was it worth it? I'm pretty tired, but I did some valuable self discovery on
-the way. Or maybe I'm just stupid. Now time for the actual destination... 😂
+So was it worth it? I'm pretty tired, but I did some valuable self discovery
+on the way. Or maybe I'm just stupid. Now time for my actual destination... 😂
 
