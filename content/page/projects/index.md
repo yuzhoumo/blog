@@ -23,7 +23,7 @@ comments: false
   - Made contributions to frontend codebase for uni.vote and dydx.vote
   - Reduces transaction fees for goverence voting on Uniswap and dYdX
 
-#### Dev Tools & Automation
+#### Dev Tools & Scripting
 
 - **[Dotfiles](https://github.com/yuzhoumo/dotfiles)**
   - Includes personal configurations for kitty, zsh, neovim, and tmux
@@ -37,7 +37,7 @@ comments: false
 
 #### Puzzles/Challenges
 
-- **[Ethernaut CTF](https://github.com/yuzhoumo/ethernaut-writeup)**
+- **[Ethernaut CTF Solutions](https://github.com/yuzhoumo/ethernaut-writeup)**
   - Writeup for OpenZepplin's [Ethernaut CTF](https://ethernaut.openzeppelin.com/) challenges
-- **[Advent of Code](https://github.com/yuzhoumo/advent-of-code)**
+- **[Advent of Code Solutions](https://github.com/yuzhoumo/advent-of-code)**
   - My solutions for various years of [Advent of Code](https://adventofcode.com/)
