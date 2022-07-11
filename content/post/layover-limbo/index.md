@@ -40,8 +40,8 @@ anything other than getting from point A to point B, just free time to think.
 
 It's a good opportunity to write blog posts like this one, to reflect on life,
 to plan and get motivated to start new personal projects upon arriving home.
-Not only am I physically and mentally miles away from your home but also miles
-away from my destination. It's in this liminal space that thoughts can flow
+Not only am I physically and mentally miles away from home but also miles away
+from my destination. It's in this liminal space that thoughts can flow
 unhindered by day-to-day or travel-related tasks.
 
 So was it worth it? I'm pretty tired, but I did some valuable self discovery
