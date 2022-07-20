@@ -13,7 +13,7 @@ and a travel time of... 32 HOURS?!
 
 With no lodging and no plans, I arrived in Las Vegas at midnight for a literal
 one day layover. A full 24 hours of crashing at airport gates and random hotel
-lobbies. Wandering alone across the the entire Vegas Strip through dozens of
+lobbies. Wandering alone across the entire Vegas Strip through dozens of
 shops, hotels, and casinos. The amount I spent on gambling and entertainment?
 $0. Of course, that number would be higher had I been in the company of
 others. The point of this trip was to have fun, after all, and I'll be doing
