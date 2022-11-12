@@ -50,6 +50,15 @@ a:hover {
   color: black;
 }
 
+#dark-mode-toggle {
+  border-bottom: 3px solid var(--darkMaincolor);
+}
+#dark-mode-toggle:hover {
+  border-top: 3px solid var(--darkMaincolor);
+  background-color: var(--darkMaincolor);
+  color: black;
+}
+
 .tags a {
   border-bottom: 3px solid var(--darkMaincolor);
 }

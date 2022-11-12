@@ -51,8 +51,20 @@ a {
   text-decoration: none;
 }
 a:hover {
-    background-color: var(--hovercolor);
-    color: #fff;
+  background-color: var(--hovercolor);
+  color: #fff;
+}
+
+#dark-mode-toggle {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid var(--maincolor);
+  color: inherit;
+}
+#dark-mode-toggle:hover {
+  border-top: 3px solid var(--maincolor);
+  background-color: var(--hovercolor);
+  color: #fff;
 }
 
 ul {
