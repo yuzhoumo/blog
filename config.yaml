@@ -1,7 +1,7 @@
 baseurl: https://joemo.dev/
 languageCode: en-us
 paginate: 3
-title: Joe Mo
+title: joemo.dev
 copyright: Joe Mo
 
 # code highlight
@@ -46,3 +46,11 @@ menu:
     - name: posts
       url: /posts
       weight: 3
+
+    - name: projects
+      url: /projects
+      weight: 4
+
+    - name: tags
+      url: /tags
+      weight: 5
