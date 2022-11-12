@@ -41,6 +41,10 @@ footer {
   border-top: 0.2rem dotted lightgray;
 }
 
+time {
+  color: #999;
+}
+
 a {
   border-bottom: 3px solid var(--darkMaincolor);
   color: inherit;
