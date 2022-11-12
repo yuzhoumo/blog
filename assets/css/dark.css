@@ -41,11 +41,24 @@ footer {
   border-top: 0.2rem dotted lightgray;
 }
 
+time {
+  color: #999;
+}
+
 a {
   border-bottom: 3px solid var(--darkMaincolor);
   color: inherit;
 }
 a:hover {
+  background-color: var(--darkMaincolor);
+  color: black;
+}
+
+#dark-mode-toggle {
+  border-bottom: 3px solid var(--darkMaincolor);
+}
+#dark-mode-toggle:hover {
+  border-top: 3px solid var(--darkMaincolor);
   background-color: var(--darkMaincolor);
   color: black;
 }
