@@ -1,6 +1,8 @@
 <header>
   <div class="main">
+    {{ if .Site.Params.CursorAnimation }}
     <div class="blinking"></div>
+    {{ end }}
     <a id="nav-title" href="{{ .Site.BaseURL }}">
       {{ if isset .Site.Params "navtitle" -}}
         {{ .Site.Params.Navtitle | markdownify }}
