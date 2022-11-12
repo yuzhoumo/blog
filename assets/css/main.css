@@ -289,7 +289,6 @@ color: whitesmoke ;
   display: inline-block;
   vertical-align: bottom;
   margin-bottom: 0.3rem;
-  margin-right: -0.6rem;
   background-color: var(--maincolor);
   -webkit-animation: blinking 2s infinite;
   animation: blinking 2s infinite;
