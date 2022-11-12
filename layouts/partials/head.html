@@ -1,7 +1,13 @@
 <header>
   <div class="main">
     <div class="blinking"></div>
-    <a id="nav-title" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+    <a id="nav-title" href="{{ .Site.BaseURL }}">
+      {{ if isset .Site.Params "navtitle" -}}
+        {{ .Site.Params.Navtitle | markdownify }}
+      {{ else }}
+        {{ .Site.Title }}
+      {{ end }}
+    </a>
   </div>
   <nav>
   {{ range .Site.Menus.main }}

@@ -1,7 +1,7 @@
 baseurl: https://joemo.dev/
 languageCode: en-us
 paginate: 3
-title: joemo.dev
+title: Joe Mo
 copyright: Joe Mo
 
 # code highlight
@@ -12,9 +12,8 @@ pygmentscodefencesguesssyntax: true
 params:
   mode: toggle  # color-mode: light, dark, toggle or auto
   useCDN: false # serve fonts and icons locally
-
   description: A personal blog for my little corner of the web
-
+  navtitle: joemo.dev
   author: Joe Mo
   avatar: /img/avatar.jpg
   bio: Hey there! I'm studying Computer Science and Data Science at UC
