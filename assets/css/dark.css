@@ -1,48 +1,20 @@
+/* || GENERAL STYLES */
+
 body {
   color: white;
   background-color: #202124;
 }
 
+/* text selection color */
 ::-moz-selection {
-  background: blue;
-  color: #fff;
-  text-shadow: none;
-}
-
-::selection {
   background: darkgreen;
   color: #fff;
   text-shadow: none;
 }
-
-hr {
-  border-top: 3px dotted blue;
-}
-
-code {
-  background-color: lightblue;
-  color: black;
-  text-decoration: bold;
-  padding: 0.1em 0.2em;
-}
-
-pre {
-  background-color: #272822;
-  line-height: 1.4;
-  overflow-x: auto;
-  padding: 1em;
-}
-
-blockquote {
-  border-color: blue;
-}
-
-footer {
-  border-top: 0.2rem dotted lightgray;
-}
-
-time {
-  color: #999;
+::selection {
+  background: darkgreen;
+  color: #fff;
+  text-shadow: none;
 }
 
 a {
@@ -54,15 +26,44 @@ a:hover {
   color: black;
 }
 
-#dark-mode-toggle {
-  border-bottom: 3px solid var(--darkMaincolor);
-}
-#dark-mode-toggle:hover {
-  border-top: 3px solid var(--darkMaincolor);
-  background-color: var(--darkMaincolor);
-  color: black;
+blockquote {
+  border-color: blue;
 }
 
+hr {
+  border-top: 0.2rem dotted lightgray;
+}
+
+time {
+  color: #999;
+}
+
+footer {
+  border-top: 0.2rem dotted lightgray;
+}
+
+/* code blocks */
+code {
+  background-color: lightblue;
+  color: black;
+  text-decoration: bold;
+  padding: 0.1em 0.2em;
+}
+pre {
+  background-color: #272822;
+  line-height: 1.4;
+  overflow-x: auto;
+  padding: 1em;
+}
+
+/* || POST STYLES */
+
+/* page titles */
+.page-title::before {
+  color: var(--darkMaincolor)
+}
+
+/* post tags formatting */
 .tags a {
   border-bottom: 3px solid var(--darkMaincolor);
 }
@@ -71,18 +72,7 @@ a:hover {
   color: black;
 }
 
-.site-title a {
-  color: white;
-  text-decoration: none !important;
-}
-
-.page-title::before { color: var(--darkMaincolor) }
-
-.header nav,
-.footer {
-  border-color: #333;
-}
-
+/* code block highlight */
 .highlight {
   background-color: #333;
 }
@@ -139,4 +129,32 @@ a:hover {
   content: 'Markdown';
   background: royalblue;
   color: whitesmoke ;
+}
+
+/* || HOMEPAGE STYLES */
+
+/* dark mode toggle button */
+#dark-mode-toggle {
+  border-bottom: 3px solid var(--darkMaincolor);
+}
+#dark-mode-toggle:hover {
+  border-top: 3px solid var(--darkMaincolor);
+  background-color: var(--darkMaincolor);
+  color: black;
+}
+
+/* blinking cursor */
+.blinking {
+  background-color: var(--darkMaincolor);
+}
+@keyframes blinking {
+  0% {
+    background-color: transparent;
+  }
+  49% {
+    background-color: transparent
+  }
+  50% {
+    background-color: var(--darkMaincolor);
+  }
 }
