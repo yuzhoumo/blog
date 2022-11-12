@@ -1,8 +1,8 @@
 :root{
---maincolor: dodgerblue;
+--maincolor: royalblue;
 --bordercl:rebeccapurple;
 --callouctcolor:dodgerblue;
---hovercolor:dodgerblue;
+--hovercolor:royalblue;
 --darkMaincolor: #50fa7b;
 }
 
@@ -23,7 +23,7 @@ body{
 }
 
 ::selection {
-  background: var(--maincolor);
+  background: dodgerblue;
   color: #fff;
 }
 
