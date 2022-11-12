@@ -14,6 +14,7 @@ html {
 }
 
 body{
+  background-color: #eee;
   display: block;
   margin: 8px;
 }
@@ -151,7 +152,7 @@ footer {
   align-items: center;
   border-top: 0.2rem dotted black;
   padding: 1rem 0rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .footer-info {
   padding: var(--footer-padding);
@@ -164,13 +165,25 @@ time {
 }
 
 /* Posts */
+.page-title {
+  margin-top: 3rem;
+  font-size: 1.6rem;
+}
+.page-title::before { content: '> '; color: var(--maincolor) }
+
 article .title {
   margin-bottom: 1em;
 }
 
-.page-title {
-  margin-top: 2em;
-  font-size: 1.6rem;
+.recent-posts {
+  margin-left: 1rem;
+}
+.list-item {
+  margin-bottom: 1rem;
+}
+.list-title {
+  margin-bottom: 0.5em;
+  font-size: 1.2rem;
 }
 
 /* Homepage Author */
@@ -201,7 +214,7 @@ article .title {
 .socials {
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 }
 .soc-link {
   display: flex;
@@ -239,10 +252,6 @@ article .title {
   color: var(--callouctcolor);
 }
 
-.site-description {
-display: flex;
-justify-content: space-between;
-}
 .tags li::before{
   content: "🏷 ";
 }
