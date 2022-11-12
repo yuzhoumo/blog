@@ -3,7 +3,13 @@
   <article>
     <div>
       <h1 class="page-title">{{ .Title }}</h1>
-      <div class="meta">{{ if isset .Params "date" }}Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ end }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</div>
+      <div class="meta">
+        {{ if isset .Params "date" }}
+          Posted on {{ dateFormat "Jan 2, 2006" .Date }}{{ end }}
+        {{ if .Draft }}
+          <span class="draft-label">DRAFT</span>
+        {{ end }}
+      </div>
     </div>
     {{ if isset .Params "tldr" }}
     <div class="tldr">
@@ -21,7 +27,9 @@
       <nav class="nav tags">
         <ul class="tags">
           {{ range .Params.tags }}
-          <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+          <li>
+            <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+          </li>
           {{ end }}
         </ul>
       </nav>
