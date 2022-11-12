@@ -12,6 +12,12 @@ pygmentscodefencesguesssyntax: true
 params:
   mode: toggle  # color-mode: light, dark, toggle or auto
   useCDN: false # serve fonts and icons locally
+
+  author: Joe Mo
+  avatar: /img/avatar.jpg
+  bio: Hey there! I'm studying Computer Science and Data Science at UC
+       Berkeley. Welcome to my personal site!
+
   social:
     - name: LinkedIn
       icon: linkedin
@@ -31,14 +37,10 @@ menu:
       url: /
       weight: 1
 
-    - name: posts
-      url: /posts
-      weight: 2
-
     - name: about
       url: /about
-      weight: 3
+      weight: 2
 
-    - name: tags
-      url: /tags
-      weight: 4
+    - name: posts
+      url: /posts
+      weight: 3
