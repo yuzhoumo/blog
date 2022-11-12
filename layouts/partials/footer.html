@@ -1,0 +1,9 @@
+<footer>
+  <div class="footer-info">
+    Copyright © {{ dateFormat "2006" now }} {{ with .Site.Copyright }} {{ . }} {{ end }}
+  </div>
+</footer>
+
+{{ if not .Site.IsServer }}
+{{ template "_internal/google_analytics_async.html" . }}
+{{ end }}

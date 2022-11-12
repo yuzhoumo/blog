@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  {{ partial "header.html" . }}
+  <body>
+    <div class="content">
+      {{ partial "head.html" . }}
+      <main class="list">
+
+        <div class="author">
+          {{- if isset .Site.Params "avatar" -}}
+          <img class="author-avatar"
+               src={{ .Site.Params.Avatar | markdownify }}
+               alt="author-picture">
+          {{- end -}}
+          {{- if isset .Site.Params "author" -}}
+          <h2 class="author-name">
+            {{ .Site.Params.Author | markdownify }}
+          </h2>
+          {{- end -}}
+          {{- if isset .Site.Params "bio" -}}
+          <p class="author-bio">
+            {{ .Site.Params.Bio | markdownify }}
+          </p>
+          {{- end -}}
+        </div>
+
+        <div class="socials">
+          {{- range $index, $key := .Site.Params.Social -}}
+          <a class="soc-link" href="{{ $key.url }}" rel="noopener" target="_blank" title="{{ $key.name }}">
+            <i class="soc-icon" data-feather="{{ $key.icon }}"></i>
+          </a>
+          {{- end -}}
+        </div>
+
+        {{- if (isset .Site.Params "social") -}}
+        <script>
+          feather.replace()
+        </script>
+        {{- end -}}
+
+        <h1 class="page-title" style="margin-bottom: 3rem">recent posts</h1>
+        <div class="recent-posts">
+          {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+          {{ $paginator := .Paginate (where $pages "Params.hidden" "ne" true) }}
+          {{ range $paginator.Pages }}
+          <section class="list-item">
+            <h1 class="list-title"><a href="{{ .RelPermalink }}">{{.Title}}</a></h1>
+            <time>{{ dateFormat "Jan 2, 2006" .Date }}{{ if .Draft }} <span class="draft-label">DRAFT</span> {{ end }}</time>
+            <div class="description">
+              {{ if isset .Params "description" }}
+              {{ .Description }}
+              {{ else }}
+              {{ .Summary }}&hellip;
+              {{ end }}
+            </div>
+          </section>
+          {{ end }}
+          {{ template "partials/paginator.html" . }}
+        </div>
+      </main>
+      {{ partial "footer.html" . }}
+    </div>
+  </body>
+</html>
