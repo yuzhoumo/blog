@@ -2,12 +2,6 @@
 title: projects
 description: a list of some things I've worked on
 image: "rooftop.png"
-menu:
-    main: 
-        weight: 3
-        params:
-            icon: code
-comments: false
 ---
 
 #### Personal Projects
