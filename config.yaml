@@ -54,7 +54,3 @@ menu:
     - name: projects
       url: /projects
       weight: 4
-
-    - name: tags
-      url: /tags
-      weight: 5

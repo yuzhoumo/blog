@@ -1,8 +1,6 @@
 <footer>
-  <div class="footer-info">
-    Copyright © {{ dateFormat "2006" now }}
-    {{ with .Site.Copyright }} {{ . }} {{ end }}
-  </div>
+  Copyright © {{ dateFormat "2006" now }}
+  {{ with .Site.Copyright }} {{ . }} {{ end }}
 </footer>
 
 {{ if not .Site.IsServer }}

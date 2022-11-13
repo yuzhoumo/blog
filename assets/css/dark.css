@@ -1,88 +1,35 @@
-/* || GENERAL STYLES */
+/* || STYLE VARIABLES */
 
-body {
-  color: white;
-  background-color: #202124;
-}
-
-/* text selection color */
-::-moz-selection {
-  background: darkgreen;
-  color: #fff;
-  text-shadow: none;
-}
-::selection {
-  background: darkgreen;
-  color: #fff;
-  text-shadow: none;
+:root {
+  --textColor: white;
+  --mainColor: #50fa7b;
+  --mainBgColor: #202124;
+  --hoverColor: #232333;
+  --hoverBgColor: #50fa7b;
+  --selectionColor: white;
+  --selectionBgColor: darkgreen;
+  --metadataColor: #999;
+  --dividerColor: lightgray;
 }
 
-a {
-  border-bottom: 3px solid var(--darkMaincolor);
-  color: inherit;
-}
-a:hover {
-  background-color: var(--darkMaincolor);
-  color: black;
-}
+/* || DARK THEME OVERRIDES */
 
-blockquote {
-  border-color: blue;
-}
-
-hr {
-  border-top: 0.2rem dotted lightgray;
-}
-
-time {
-  color: #999;
-}
-
-footer {
-  border-top: 0.2rem dotted lightgray;
+/* social media icons */
+.soc-link:hover {
+  background-color: transparent;
 }
 
 /* code blocks */
 code {
-  background-color: lightblue;
-  color: black;
-  text-decoration: bold;
-  padding: 0.1em 0.2em;
+  background-color: #323438;
 }
 pre {
   background-color: #272822;
-  line-height: 1.4;
-  overflow-x: auto;
-  padding: 1em;
 }
 
-/* || POST STYLES */
-
-/* page titles */
-.page-title::before {
-  color: var(--darkMaincolor)
-}
-
-/* post tags formatting */
-.tags a {
-  border-bottom: 3px solid var(--darkMaincolor);
-}
-.tags a:hover {
-  background-color: var(--darkMaincolor);
-  color: black;
-}
-
-/* code block highlight */
+/* code syntax highlight */
 .highlight {
   background-color: #333;
-}
-.soc-link:hover {
-  color: var(--darkMaincolor);
-  background-color: transparent;
-}
-.draft-label {
-  color: var(--darkMaincolor);
-  background-color: blue;
 }
 .highlight pre code[class=language-javaScript]::before,
 .highlight pre code[class="language-js"]::before {
@@ -129,32 +76,4 @@ pre {
   content: 'Markdown';
   background: royalblue;
   color: whitesmoke ;
-}
-
-/* || HOMEPAGE STYLES */
-
-/* dark mode toggle button */
-#dark-mode-toggle {
-  border-bottom: 3px solid var(--darkMaincolor);
-}
-#dark-mode-toggle:hover {
-  border-top: 3px solid var(--darkMaincolor);
-  background-color: var(--darkMaincolor);
-  color: black;
-}
-
-/* blinking cursor */
-.blinking {
-  background-color: var(--darkMaincolor);
-}
-@keyframes blinking {
-  0% {
-    background-color: transparent;
-  }
-  49% {
-    background-color: transparent
-  }
-  50% {
-    background-color: var(--darkMaincolor);
-  }
 }
