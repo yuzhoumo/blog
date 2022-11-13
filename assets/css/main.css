@@ -361,6 +361,7 @@ color: whitesmoke ;
 }
 .soc-link:hover{
   color: var(--maincolor);
+  background-color: transparent;
 }
 .soc-icon {
   width: 28px;
