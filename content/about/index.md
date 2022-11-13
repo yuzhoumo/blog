@@ -33,7 +33,7 @@ something interesting!
 
 ### contact me
 
-```
+```plaintext
 Email     |  contact[at]joemo.dev
 Discord   |  jo3_mo#4227
 Telegram  |  @jo3_mo

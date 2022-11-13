@@ -27,13 +27,13 @@ Consider the following example. Say a website has a vulnerable search endpoint:
 
 Unlike `google.com`, our vulnerable website returns a page that looks like this:
 
-```
+```html
 <h1>Search</h1>
 <h3>Search results for helloworld</h3>
 <table>
-    <tr>
-        <td>No results!</td>
-    </tr>
+  <tr>
+    <td>No results!</td>
+  </tr>
 </table>
 ```
 
@@ -45,13 +45,13 @@ Notice how the vulnerable site just injects `helloworld` directly into the page.
 
 If the attacker gets a user to click on this link, the result page would look something like this:
 
-```
+```html
 <h1>Search</h1>
 <h3>Search results for <script>EVIL_CODE</script></h3>
 <table>
-    <tr>
-        <td>No results!</td>
-    </tr>
+  <tr>
+    <td>No results!</td>
+  </tr>
 </table>
 ```
 
