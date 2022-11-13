@@ -4,11 +4,6 @@ paginate: 3
 title: Joe Mo
 copyright: Joe Mo
 
-# code highlight
-pygmentsstyle: monokai
-pygmentscodefences: true
-pygmentscodefencesguesssyntax: true
-
 params:
   description: A personal blog for my little corner of the web
 
@@ -54,3 +49,10 @@ menu:
     - name: projects
       url: /projects
       weight: 4
+
+markup:
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    tabWidth: 2
