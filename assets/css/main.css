@@ -126,7 +126,7 @@ footer {
 }
 .page-title::before {
   content: '> ';
-  color: var(--mainColor)
+  color: var(--mainColor);
 }
 article .page-title {
   margin-bottom: 0.8rem;
@@ -186,18 +186,20 @@ article .page-title {
   margin-bottom: 0.3rem;
   margin-right: 0.2rem;
   background-color: var(--mainColor);
-  -webkit-animation: blinking 2s infinite;
-  animation: blinking 2s infinite;
+  animation: blinking 2s both infinite;
 }
 @keyframes blinking {
   0% {
-    background-color: transparent;
+    opacity: 1;
   }
   49% {
-    background-color: transparent
+    opacity: 1;
   }
   50% {
-    background-color: var(--mainColor);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
@@ -301,30 +303,30 @@ pre code {
   padding: 0;
 }
 
-/* code block highlight */
+/* code syntax highlight */
 .highlight {
-  position: relative;
-  -webkit-overflow-scrolling: touch;
+position: relative;
+-webkit-overflow-scrolling: touch;
 }
 .highlight pre ::selection {
-  background: rgba(255, 255, 255, 0.2);
-  color: inherit;
+background: rgba(255, 255, 255, 0.2);
+color: inherit;
 }
 .highlight pre code[class*="language-"] {
-  -webkit-overflow-scrolling: touch;
+-webkit-overflow-scrolling: touch;
 }
 .highlight pre code[class*="language-"]::before {
-  background: black;
-  border-radius: 0 0 0.25rem 0.25rem;
-  color: white;
-  font-size: 12px;
-  letter-spacing: 0.025rem;
-  padding: 0.1rem 0.5rem;
-  position: absolute;
-  right: 1rem;
-  text-align: right;
-  text-transform: uppercase;
-  top: 0;
+background: black;
+border-radius: 0 0 0.25rem 0.25rem;
+color: white;
+font-size: 12px;
+letter-spacing: 0.025rem;
+padding: 0.1rem 0.5rem;
+position: absolute;
+right: 1rem;
+text-align: right;
+text-transform: uppercase;
+top: 0;
 }
 .highlight pre code[class=language-javaScript]::before,
 .highlight pre code[class="language-js"]::before {
@@ -343,32 +345,32 @@ color: white;
 .highlight pre code[class*='language-sh']::before {
 content: 'shell';
 background: green;
-color:white
+color:white;
 }
 .highlight pre code[class*='language-json']::before{
 content: 'json';
 background: dodgerblue;
- color: #000000 
+color: #000000;
 }
 .highlight pre code[class*='language-python']::before,
 .highlight pre code[class*='language-py']::before {
 content: 'py';
 background: blue;
-color: yellow ;
+color: yellow;
 }
 .highlight pre code[class*='language-css']::before{
 content: 'css';
 background: cyan;
-color: black ;
+color: black;
 }
 .highlight pre code[class*='language-go']::before{
 content: 'Go';
 background: cyan;
-color: royalblue ;
+color: royalblue;
 }
 .highlight pre code[class*='language-md']::before,
 .highlight pre code[class*='language-md']::before{
 content: 'Markdown';
 background: royalblue;
-color: whitesmoke ;
+color: whitesmoke;
 }
