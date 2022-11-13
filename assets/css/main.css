@@ -179,7 +179,7 @@ article .page-title {
 
 /* blinking cursor */
 .blinking {
-  width:15px;
+  width: 15px;
   height: 2px;
   display: inline-block;
   vertical-align: bottom;
