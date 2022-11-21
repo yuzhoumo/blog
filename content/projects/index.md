@@ -1,7 +1,5 @@
 ---
 title: projects
-description: a list of some things I've worked on
-image: "rooftop.png"
 ---
 
 #### Personal Projects

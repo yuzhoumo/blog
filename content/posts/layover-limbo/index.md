@@ -2,6 +2,7 @@
 title: Layover Limbo
 description: Living in the space between home and destination
 date: 2022-07-03
+draft: true
 tags: [journal, travel, philosophy]
 ---
 
