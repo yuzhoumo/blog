@@ -1,8 +1,8 @@
 baseurl: https://joemo.dev/
 languageCode: en-us
 paginate: 3
-title: Joe Mo
-copyright: Joe Mo
+title: Joe (Yuzhou) Mo
+copyright: Joe (Yuzhou) Mo
 
 params:
   description: A personal blog for my little corner of the web
@@ -15,10 +15,10 @@ params:
   navtitle: joemo.dev      # navbar main link text
   cursorAnimation: true    # show blinking cursor animation in navbar
 
-  author: Joe Mo
+  author: Joe (Yuzhou) Mo
   avatar: /img/avatar.jpg
-  bio: Hey there! I'm studying Computer Science and Data Science at UC
-       Berkeley. Welcome to my personal site!
+  bio: Hey there! I'm a recent Computer Science graduate from UC Berkeley.
+			 Welcome to my personal site!
 
   social:
     - name: LinkedIn
