@@ -18,7 +18,7 @@ params:
   author: Joe (Yuzhou) Mo
   avatar: /img/avatar.jpg
   bio: Hey there! I'm a recent Computer Science graduate from UC Berkeley.
-			 Welcome to my personal site!
+       Welcome to my personal site!
 
   social:
     - name: LinkedIn
