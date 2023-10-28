@@ -13,7 +13,7 @@ day-long layover. A full 24 hours of crashing at airport gates and random
 hotel lobbies; roaming alone across the entire Vegas Strip through dozens of
 shops, hotels, and casinos. The amount I spent on gambling and entertainment?
 A surprising $0, barring a wrap from CVS, a Chipotle bowl, and some water.
-Of course, that number would've be higher had I been in the company of others.
+Of course, that number would be higher had I been in the company of others.
 The point of this trip was to have fun, after all, and I'd have plenty of
 opportunities to spend upon reaching New York.
 
