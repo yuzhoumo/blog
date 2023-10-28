@@ -19,7 +19,7 @@ spending when I reach my actual destination.
 
 I've realized that on longer trips, I often enjoy the journey as much as the
 destination -- that weird in-between stage of travel blurring the lines
-between today and yesterday, making the entire segment feels like one
+between today and yesterday, making the entire segment feel like one
 continuous splotch of memory. It's during times like these where I find myself
 in the deepest introspection. There's no pressure to do anything other than
 getting from point A to point B. There's just free time to think.
@@ -30,12 +30,12 @@ arriving home. Not only am I physically and mentally miles away from home
 but also miles away from my destination. It's in this liminal space that
 thoughts can flow unhindered by day-to-day tasks or travel itineraries.
 
-Was that why I choose this flight? Well, partially. It was also because it
-was the cheapest option at the time, and it was also out of amusement. I have
-a very ironic sense of humor, and stranding myself in sin city to reflect on
-life was just too funny. Imagine journaling in a cigarette-smoke filled
-casino or doing some soul-searching in front of a strip club! How could I pass
-that opportunity up?
+Was that why I chose this flight? Well, partially. I was amused at the idea of
+treating Vegas as an "in-between stage" of this trip, and it was also the
+cheapest option at the time. I have a very ironic sense of humor, and
+stranding myself in sin city to reflect on life was just too funny. Imagine
+journaling in a cigarette-smoke filled casino or doing some soul-searching in
+front of a strip club! How could I pass that opportunity up?
 
 Jokes aside, there was an urge to test myself: a curiousity of how I'd handle
 my usual routines juxtaposed against ridiculous circumstances. Obviously, I
@@ -46,6 +46,8 @@ been through this before, and I can get through it again! I'd been reading
 Marcus Aurelius's _Meditations_, which no doubt inspired my decision.
 
 So was it worth it? I'm pretty tired, but I did some valuable self discovery
-on the way. Or maybe I'm just stupid. Now time for my actual destination! 😂
+on the way... or something. 😂
+
+Now time for my actual destination!
 
 Edited: 2023-10-28
