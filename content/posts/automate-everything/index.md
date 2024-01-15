@@ -24,7 +24,7 @@ The first thing I'd start with is writing a script for installing all the applic
 
 First, we can define 2 lists of apps, casks (apps with user interface) and command line tools. Some Homebrew packages have conflicting names and command line packages tend to depend on other ones, so it's important to handle these two lists separately. 
 
-```
+```sh
 casks=(
   firefox
   spotify
@@ -95,7 +95,7 @@ We make a new pueue group, then set parallel to 4. This limits pueue to run 4 br
 
 There's one last thing I do to ensure the script is [idempotent](https://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning), meaning we can run it multiple times without breaking. This is a very useful property to maintain, and I go out of my way to ensure this for all my scripts. Before our script runs, we can define a list of already-installed apps, so that we skip over those when running multiple times. Now, we can wrap our pueue commands with a check to ensure we skip packages that are already installed. If no apps need to be installed, we skip the `pueue wait`, since no installation tasks were added.
 
-```
+```sh
 # Save set of already-installed packages
 declare -A already_installed && \
   for i in $(brew list); do already_installed["$i"]=1; done
@@ -129,7 +129,7 @@ fi
 
 Finally, as a cherry on top, I add this little hack to get around the annoying macOS "Are you sure you want to open...?" dialog on newly installed casks.
 
-```
+```sh
 [[ "$cask_flag" -eq 1 ]] && \
   printf "Disabling Gatekeeper quarantine on all installed applications...\n"; \
   sudo xattr -dr com.apple.quarantine /Applications 2>/dev/null
