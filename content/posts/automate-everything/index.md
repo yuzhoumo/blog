@@ -10,7 +10,7 @@ If you're anything like me, buying a new laptop means HOURS of setup: installing
 
 Well, that's exactly what I did, falling into the classic trope of "I'm a software developer, I'll just write a program to automate this!" before diving headfirst into a rabbit hole to the center of the Earth.  As always, there's a relevant [xkcd comic](https://xkcd.com/1319/):
 
-![[automation-xkcd.png]]
+![xkcd-automation-comic](automation-xkcd.png)
 
 So after countless hours of "ongoing development", was it really worth it? 1000%, yes!  The bulk of my OS automations really took me only a couple weekends to finish; Everything after that was occasional maintenance and updates that I have accumulated over time.
 
