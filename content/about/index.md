@@ -19,7 +19,8 @@ links:
 
 Hey there, I'm Joe! I'm a recent Computer Science graduate from
 [UC Berkeley](https://www.berkeley.edu/). I'm currently working at
-[Aruba Networks](https://www.arubanetworks.com/) as a systems software engineer.
+[Aruba Networks](https://www.arubanetworks.com/) as a systems software
+engineer.
 
 I'm passionate about technology and deeply concerned about its ethical use. In
 our digitized world, public understanding of the software we depend on is
@@ -28,14 +29,14 @@ the world tick and always open to hear others' perspectives. Feel free to
 contact me via any of the methods below.
 
 This website is primarily a place for me to organize my thoughts and share
-what I'm working on. If you'd like, take a look at my blog and maybe you'll
-find something interesting!
+what I'm working on. If you'd like, take a peek at my blog and maybe you'll
+find something that interests you!
 
 ### contact me
 
 ```plaintext
-Email     |  contact[at]joemo.dev
-Discord   |  jo3_mo#4227
-Twitter   |  @jo3_mo
-Session   |  05bb75f6fce7c883e309e4672a3d6199ddf756d238155d459aac6b26bb32348771
+Email        |  joe[at]joemo.dev
+Signal       |  panda.1337
+Discord      |  perpetualpanda
+X (Twitter)  |  @jo3_mo
 ```
