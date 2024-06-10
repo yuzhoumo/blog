@@ -39,7 +39,7 @@ image: "rooftop.png"
 - **[macOS Provisioning Scripts](https://github.com/yuzhoumo/macos-configs)**
   - Idempotent scripts for setting up a fresh install of macOS
   - Applies app installs, personalizations, and privacy/security tweaks
-- **[OpenSUSE Provisioning Scripts](https://github.com/yuzhoumo/opensuse-configs)
+- **[OpenSUSE Provisioning Scripts](https://github.com/yuzhoumo/opensuse-configs)**
   - Idempotent scripts for setting up a fresh install of OpenSUSE
 - **[Windows Provisioning Scripts](https://github.com/yuzhoumo/windows-configs)**
   - Scripts for setting up a fresh install of Windows (work in progress)
