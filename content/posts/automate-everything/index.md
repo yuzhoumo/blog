@@ -6,23 +6,53 @@ tags:
   - code
   - programming
 ---
-If you're anything like me, buying a new laptop means HOURS of setup: installing apps, signing in to things, configuring dev environments, adjusting personalization options and system settings to be *just right*. Even weeks later, I still find myself tweaking one or two things that just feel... off. Wouldn't it be nice if you could get everything set up by running a single command?
+If you're anything like me, buying a new laptop means HOURS of setup:
+installing apps, signing in to things, configuring dev environments, adjusting
+personalization options and system settings to be *just right*. Even weeks
+later, I still find myself tweaking one or two things that just feel... off.
+Wouldn't it be nice if you could get everything set up by running a single
+command? Should be simple, right?
 
-Well, that's exactly what I did, falling into the classic trope of "I'm a software developer, I'll just write a program to automate this!" before diving headfirst into a rabbit hole to the center of the Earth.  As always, there's a relevant [xkcd comic](https://xkcd.com/1319/):
+Relevant [xkcd comic](https://xkcd.com/1319/):
 
 ![xkcd-automation-comic](automation-xkcd.png)
 
-So after countless hours of "ongoing development", was it really worth it? 1000%, yes!  The bulk of my OS automations really took me only a couple weekends to finish; Everything after that was occasional maintenance and updates that I have accumulated over time.
+After countless hours of "ongoing development", I had a working set of scripts
+that automated most of the process. Of course, true to the comic, there's
+always will be some ongoing development; my laptop setup changes over time,
+after all. However, this system still saves me an immense amount of effort
+any time I need to get up and running from scratch.
 
-What took a long time to perfect were my [dotfiles](https://missing.csail.mit.edu/2019/dotfiles/). Looking to more seasoned developers, many have personal configurations that are *reproducible* and *highly customized* for their specific needs. I believe this is no coincidence. Thinking deeply about and investing in your own tooling is essential to growing as a developer. But I digress, those principles are more relevant for developer configs, though I think they extend somewhat to system configuration as well. While this guide focuses mostly on my macOS setup automation,  these automations were originally an extension of my dotfiles!
+The bulk of my OS automations really took me only a couple weekends to finish;
+Everything after that was occasional maintenance and updates that I accumulated
+over time as my needs changed.
 
-If you can, it's very helpful to write these setup scripts starting from a computer with factory defaults. That way, you can update your automations as you modify your system. Since I use a Macbook for most of my development tasks, this guide will be geared toward macOS. Also, it assumes at least intermediate knowledge of shell scripting.
+What took a long time to perfect were my dotfiles, personal configurations that
+are *reproducible* and *highly customized* for my specific needs. MIT's
+[missing semester](https://missing.csail.mit.edu/2019/dotfiles/) course has a
+nice intro on this topic if you're interested in setting up your own!
 
-## Step 1: Blazing fast parallel app installation
+But I digress, while this article focuses mostly on my macOS
+setup automation, these automations were originally an extension of my dotfiles!
 
-The first thing I'd start with is writing a script for installing all the applications you need using Homebrew. Here's my [brew.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/brew.sh) script for reference. I'll be walking through what each section does. The following code blocks are for explanatory purposes only! Please view and modify the full script, if you'd like to replicate this.
+It's very helpful to write these setup scripts starting from a computer with
+factory defaults (or in a virtual machine). That way, you can update your
+automations as you modify your system to your liking.
 
-First, we can define 2 lists of apps, casks (apps with user interface) and command line tools. Some Homebrew packages have conflicting names and command line packages tend to depend on other ones, so it's important to handle these two lists separately. 
+Below is an overview of my setup for inspiration.
+
+## Blazing fast parallel app installation
+
+The first thing I started with was writing a script for installing all the
+applications I needed, using Homebrew. Linked is my
+[brew.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/brew.sh)
+script for reference. I'll be walking through what each section does. The
+following code blocks are for explanatory purposes only. Please view and modify
+the full script you intend to replicate this.
+
+I defined 2 lists of apps, casks (apps with user interface) and command line
+tools. Some Homebrew casks/cli packages have conflicting names, so it's
+important to handle these two lists separately.
 
 ```sh
 casks=(
@@ -46,7 +76,10 @@ command -v brew >/dev/null 2>&1 || /bin/bash -c \
 export PATH="/opt/homebrew/bin:$PATH"
 ```
 
-Homebrew is painfully slow since it installs apps serially. We can parallelize downloads and installations using [pueue](https://github.com/Nukesor/pueue). Here's the basic structure we follow:
+My original script simply iterated through these lists and each package
+one after another, but this was rather slow. I ended up parallelizing downloads
+and installations using a neat tool called [pueue](https://github.com/Nukesor/pueue).
+Here's the basic structure I followed:
 
 ```sh
 # Cleanup function
@@ -91,9 +124,22 @@ for app_name in "${cli[@]}"; do
 done
 ```
 
-We make a new pueue group, then set parallel to 4. This limits pueue to run 4 brew installs in parallel at a time. Notice that for casks we can simply use `brew install`, since they are standalone .app files. However, we need to use `brew fetch` for cli applications. This will download but not install them, since it is unsafe to install them in parallel due to potential dependency conflicts. After using `pueue wait` to ensure all brew tasks are done, we install the command line tools one by one. There's also a trap to cleanup pueue processes when the script exits.
+We can make a new pueue group, then set parallel to 4. This limits pueue to run
+4 brew installs in parallel at a time. Notice that for casks we can simply use
+`brew install` in parallel, since they are standalone .app files. However, we
+need to use `brew fetch` for cli applications. This will download but not
+install them, since it is unsafe to install them in parallel (many cli packages
+will have dependencies on other ones). After using `pueue wait` to ensure all
+brew tasks are done, I install the command line tools one by one. I also added
+a signal trap to clean up pueue processes when the script exits.
 
-There's one last thing I do to ensure the script is [idempotent](https://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning), meaning we can run it multiple times without breaking. This is a very useful property to maintain, and I go out of my way to ensure this for all my scripts. Before our script runs, we can define a list of already-installed apps, so that we skip over those when running multiple times. Now, we can wrap our pueue commands with a check to ensure we skip packages that are already installed. If no apps need to be installed, we skip the `pueue wait`, since no installation tasks were added.
+There's one last thing I do to ensure the script is
+[idempotent](https://en.wikipedia.org/wiki/Idempotence#Computer_science_meaning).
+Before the script runs, we can define a list of already-installed apps, so that
+we skip over those when running multiple times. Now, we can wrap our pueue
+commands with a check to ensure we skip packages that are already installed.
+If no apps need to be installed, we skip the `pueue wait`, since no
+installation tasks were added.
 
 ```sh
 # Save set of already-installed packages
@@ -127,7 +173,8 @@ if [[ "$cli_flag" -eq 1 || "$cask_flag" -eq 1 ]]; then
 fi
 ```
 
-Finally, as a cherry on top, I add this little hack to get around the annoying macOS "Are you sure you want to open...?" dialog on newly installed casks.
+Finally, I added this little hack to get around the annoying macOS
+"Are you sure you want to open...?" dialog on newly installed casks.
 
 ```sh
 [[ "$cask_flag" -eq 1 ]] && \
@@ -135,11 +182,15 @@ Finally, as a cherry on top, I add this little hack to get around the annoying m
   sudo xattr -dr com.apple.quarantine /Applications 2>/dev/null
 ```
 
-And voila! We've automated our app installations. Now we just need to keep the app lists up to date.
+And voila! We've automated our app installations. Now we just need to keep the
+app lists up to date.
 
-## Step 2: Font installation
+## Font installation
 
-Fonts are super easy to automate. On macOS, system fonts are pulled from the `$HOME/Library/Fonts` directory. I use a very short and simple [font.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/font.sh) script to copy my custom fonts into this directory:
+Font installation is super easy to automate. On macOS, system fonts are pulled
+from the `$HOME/Library/Fonts` directory. I use a very short and simple
+[font.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/font.sh)
+script to copy my custom fonts into this directory:
 
 ```sh
 #!/usr/bin/env zsh
@@ -157,11 +208,19 @@ printf "%s" "${fonts}" | xargs -I % cp "%" "${install_location}/"
 printf "\nFonts have been installed\n"
 ```
 
-We use the `find` tool to get a list of otf/ttf font files using a short regular expression. Piping these paths into `xargs`, we can use `cp` to copy each one into the font install location.
+It uses `find` to get a list of otf/ttf font files via a short regular
+expression, and pipes these paths as arguments to the copy command using
+`xargs`.
 
-## Step 3: Customizing icons
+## Customizing icons
 
-This step is purely for looks, but I like all my icons to be consistent with the standard sizes introduced in Big Sur. You can find custom icons at [macosicons.com](https://macosicons.com/) (not sponsored lol), and [this script](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/icon.sh) will take care of replacing them for you! My script pulls the location of the app icon from each application's info file and copies the replacement icon to its respective location.
+This step is purely for looks, but I like all my icons to be consistent with
+the standard sizes introduced in Big Sur. You can find custom icons at
+[macosicons.com](https://macosicons.com/) (not sponsored lol), and
+[this script](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/icon.sh)
+takes care of replacing them. My script pulls the location of the app icon
+from each application's info file and copies the replacement icon to its
+expected location.
 
 ```sh
 #!/usr/bin/env zsh
@@ -204,9 +263,16 @@ for app_name in "${apps[@]}"; do
     sudo touch "/Applications/${app_name}.app"
 done
 ```
-## Step 4: Configuring the dock
 
-This is my [dock.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/dock.sh) script for configuring app shortcuts in the macOS dock. Again, I won't be going into much detail on this one, since it's a lot of Apple-specific jargon. It dumps the macOS launch services register, and greps for the paths of applications. Then using Apple's `defaults` tool, we write to the `com.apple.dock` persistent app array in [property list](https://developer.apple.com/documentation/bundleresources/information_property_list) format. Killing the `Dock` process restarts it with the new app list.
+## Configuring the dock
+
+This is my [dock.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/dock.sh)
+script for configuring app shortcuts in the macOS dock. Again, I won't be going
+into much detail on this one, since it's a lot of Apple-specific jargon. It
+dumps the macOS launch services register, and greps for the paths of applications.
+Then using Apple's `defaults` tool, we write to the `com.apple.dock`
+persistent app array in [plist](https://developer.apple.com/documentation/bundleresources/information_property_list)
+format. Killing the `Dock` process restarts it with the new app list.
 
 ```sh
 #!/usr/bin/env zsh
@@ -264,27 +330,57 @@ done
 killall Dock
 ```
 
-## Step 5: Configuring system settings
+## Configuring system settings
 
-This [monster of a script](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/macos.sh) configures all of the macOS system settings I could figure out how to automate. This is admittedly the most fragile of my scripts, since a lot of these automations are undocumented and subject to change. However, I can confirm they are working as of macOS Sonoma.
+This [monster of a script](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/macos.sh)
+configures all of the macOS system settings I could figure out how to automate.
+This is admittedly the most fragile of my scripts, since a lot of these
+automations are undocumented and subject to change. However, I can confirm they
+are working as of macOS Sonoma.
 
-When I first started building my configs, I took much inspiration from [Mathias Bynens' legendary dotfiles](https://github.com/mathiasbynens/dotfiles). A lot of the macOS configs came from his `.macos` script (some of these don't work anymore, beware), and I've figured out how to configure some additional ones over time.  I've also stuck some other miscellaneous personalization settings in [post.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/post.sh), which I run after all of my other scripts. Finally, I handle settings that require some user intervention in [manual.sh](https://github.com/yuzhoumo/macos-configs/blob/main/run/manual.sh).
+When I first started building my configs, I took much inspiration from
+[Mathias Bynens' legendary dotfiles](https://github.com/mathiasbynens/dotfiles).
+A lot of the macOS configs came from his `.macos` script (some of these don't
+work anymore, beware), and I've figured out how to configure some additional
+ones over time. I've also stuck some other miscellaneous personalization
+settings in [post.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/post.sh),
+which I run after all of my other scripts. Finally, I handle settings that
+require some user intervention in
+[manual.sh](https://github.com/yuzhoumo/macos-configs/blob/main/run/manual.sh).
 
-For this part, I would suggest picking and choosing what you need from the options documented in my scripts (or if you'd like, going down the trial-and-error rabbit hole using Apple's defaults tool).
+For this part, I would suggest picking and choosing what you need from the
+options documented in my scripts (or if you'd like, going down the
+trial-and-error rabbit hole using Apple's defaults tool).
 
-[macos-defaults.com](https://macos-defaults.com/) is a good resource for some basic configs, but figuring out more specific settings may require some tinkering with `defaults` and `osascript`. It really depends how much automation is "good enough" for your needs, and I'll leave that as an exercise for the reader ;)
+[macos-defaults.com](https://macos-defaults.com/) is a good resource for some
+basic configs, but figuring out more specific settings may require some
+tinkering with `defaults` and `osascript`. It really depends how much
+automation is "good enough" for your needs, and I'll leave that as an exercise
+for the reader ;)
 
-## Step 6: Dotfiles!
+## Dotfiles!
 
-Dotfiles are something to build up over time, but a simple .zshrc would be a great place to start. While this is a guide on automating macOS configurations, dotfiles are a great way to automate your application-specific settings! I track my dotfiles separately in [this repository](https://github.com/yuzhoumo/dotfiles/), and in my automated OS configurations, I have a [dot.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/dot.sh) script to pull my dotfiles and run a sync script.
+Dotfiles are something to build up over time, but a simple .zshrc would be a
+great place to start. While this is a guide on automating macOS configurations,
+dotfiles are a great way to automate your application-specific settings! I
+track my dotfiles separately in [this repository](https://github.com/yuzhoumo/dotfiles/),
+and in my automated OS configurations, I have a
+[dot.sh](https://github.com/yuzhoumo/macos-configs/blob/main/scripts/dot.sh)
+script to pull my dotfiles and run a sync script.
 
-I highly recommend this split approach, since it results in two nicely complementary modules. This setup allows you to write automated configurations for multiple operating systems, which act as a wrapper around your dotfiles. For instance, I have [OpenSuse configs](https://github.com/yuzhoumo/opensuse-configs) as well, which install the same underlying dotfiles repository.
+I highly recommend this split approach, since this setup allows you to share
+dotfiles across multiple operating systems. For instance, I have a set of
+[OpenSuse configuration scripts](https://github.com/yuzhoumo/opensuse-configs)
+as well, which install the same underlying dotfiles repository.
 
-While this guide doesn't cover dotfile setup in detail, there's plenty of great guides online that cover this. I may write one in the future, time permitting.
+While this guide doesn't cover dotfile setup in detail, there's plenty of great
+guides online that cover this. I may write one in the future, time permitting.
 
 ## Putting it all together
 
-You may have noticed throughout this guide, that I've been referencing my [macos-configs](https://github.com/yuzhoumo/macos-configs) repository, which has the following structure:
+You may have noticed throughout this guide, that I've been referencing my
+[macos-configs](https://github.com/yuzhoumo/macos-configs) repository, which
+has the following structure:
 
 ```
 ├── assets
@@ -314,10 +410,18 @@ You may have noticed throughout this guide, that I've been referencing my [macos
     └── post.sh
 ```
 
-Having our scripts and assets composed like this allows for each one to be run individually, in case we need to modify specific configurations down the line. I also keep these files versioned in a git repository. The final setup would be to add a one line install to run it all!
+Having our scripts and assets composed like this allows for each one to be run
+individually, in case we need to modify specific configurations down the line.
+I also keep these files versioned in a git repository. The final setup would
+be to add a one line install to run it all!
 
 ```
 mkdir ~/Desktop/macos-configs && cd ~/Desktop/macos-configs && curl -#L https://github.com/yuzhoumo/macos-configs/tarball/main --silent | tar -xzv --strip-components 1 --exclude={README.md,LICENSE} && ./run/run.sh
 ```
 
-I have a single `run.sh` script that runs all the other ones. Plugging this into the above command, we have our full system configuration all in one line! For me, running through this setup takes about 15 minutes. Good luck and happy hacking!
+I have a single `run.sh` script that runs all the other ones. Plugging this
+into the above command, we have our full system configuration all in one line!
+For me, running through this setup takes about 15 minutes (including Homebrew
+downloads). Good luck and happy hacking!
+
+Edited 2024-12-30
