@@ -18,10 +18,9 @@ links:
 ---
 
 Hey there, I'm Joe! I'm a software engineer, currently building
-[Airkey](https://airkey.com/) at Capital One.
-
-Prev: systems software engineer at [Aruba Networks](https://www.arubanetworks.com/),
-Computer Science at [UC Berkeley](https://www.berkeley.edu/).
+[AirKey](https://airkey.com/) at Capital One. Prev: systems software engineer
+at [Aruba Networks](https://www.arubanetworks.com/), Computer Science at
+[UC Berkeley](https://www.berkeley.edu/).
 
 I'm passionate about technology and deeply concerned about its ethical use. In
 our digitized world, public understanding of the software we depend on is
