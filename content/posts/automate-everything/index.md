@@ -32,14 +32,14 @@ are *reproducible* and *highly customized* for my specific needs. MIT's
 [missing semester](https://missing.csail.mit.edu/2019/dotfiles/) course has a
 nice intro on this topic if you're interested in setting up your own!
 
-But I digress, while this article focuses mostly on my macOS
-setup automation, these automations were originally an extension of my dotfiles!
+But I digress; while these scripts were originally an extension of my dotfiles,
+this article focuses mostly on my macOS setup automation.
 
-It's very helpful to write these setup scripts starting from a computer with
-factory defaults (or in a virtual machine). That way, you can update your
-automations as you modify your system to your liking.
+If you'd like to write your own scripts, it's very helpful to manually set up a
+computer from factory defaults (or in a virtual machine) and automate each step
+as you go along.
 
-Below is an overview of my setup for inspiration.
+Below is an overview of what I did for my setup.
 
 ## Blazing fast parallel app installation
 
