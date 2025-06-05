@@ -1,6 +1,6 @@
 ---
 title: Thinking as a service
-description: A warning against mental atrophy
+description: A programmer's warning against mental atrophy
 date: 2025-05-17
 tags: [journal, programming]
 ---
@@ -13,13 +13,13 @@ to necessity. In the meantime, that $15 paywall is enough to keep my cheap ass
 from biting 🤣.
 
 When I'm not sleeping through the entire flight, I really do enjoy the rare
-hours of forced focus. In fact I've come to realize that it's almost the only
+hours of forced focus. In fact, I've come to realize that it's almost the only
 time I don't have access to the internet.
 
 What do I use that focus for? Writing, reading... sometimes programming.
 Though as I open my editor, it always dawns on me how much I rely on the web.
 Perhaps I'm just serially online, but somehow I feel that I'm not in the
-minority nowadays; especially as a programmer.
+minority nowadays, especially as a programmer.
 
 What is the modern-day programmer without a search engine? Without Stack
 Overflow? And recently, without an LLM?
@@ -44,7 +44,7 @@ doesn't mean we should get rid of all modern transportation, but it does
 highlight something obvious. Just as our muscles atrophy without use, so does
 our mind without thought; and most of us could really use a workout.
 
-Just a few weeks ago, I witnessed a teammate ask GitHub Copilot:
+Just a few weeks ago, I witnessed a coworker ask GitHub Copilot:
 
 "How do I get this url using curl? theurl.com/content"
 
@@ -56,8 +56,8 @@ Is this really our fate? To become copy-paste developers reliant on proprietary
 pay-per-request SaaS to think for us?
 
 However, as much as I hate the venture capital fueled tech-grift-industrial
-complex pushing LLMs (*ahem*, "AI") down the throats of anyone and everyone, I'd
-be hard-pressed to wholly deny its usefulness in certain domains. We just
+complex pushing LLMs (*ahem*, "AI") down the throats of anyone and everyone,
+I'd be hard-pressed to wholly deny its usefulness in certain domains. We just
 need to be cautious of the fact that every line of code suggested to us by
 mechanized means is a thought outsourced to a machine.
 
@@ -66,6 +66,7 @@ Done poorly, we stop thinking at all. I'm all for boosting productivity with
 these tools, but let's make sure that productivity doesn't drop to zero without
 them.
 
-We can't take for granted the mental challenge that the act of programming
-affords, and we need to practice intentionally, sans crutches, lest we lose
-that skill altogether or never develop it in the first place.
+The act of machine-assisted programming no longer affords enough mental
+challenge, so we need intentional practice, sans crutches, lest we lose those
+skills altogether or, for those new to the field, never develop them in the
+first place.
