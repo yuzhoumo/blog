@@ -3,6 +3,7 @@ languageCode: en-us
 paginate: 3
 title: Joe (Yuzhou) Mo
 copyright: Joe (Yuzhou) Mo
+enableRobotsTXT: true
 
 params:
   description: A personal blog for my little corner of the web
