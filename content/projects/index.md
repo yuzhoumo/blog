@@ -24,7 +24,7 @@ image: "rooftop.png"
 - **[Pathfinder](https://pathfinder.joe-mo.com)** | _React, TypeScript, Ant Design_
   - Built an interactive visualizer for pathfinding and maze generation algorithms
   - Implemented visualizations for 10 search and maze generation algorithms
-- **[uni.vote](https://uni.vote) | _React, TypeScript_
+- **[uni.vote](https://uni.vote)** | _React, TypeScript_
   - Made frontend contributions to uni.vote
   - Saves on transaction fees for Uniswap goverence voting
 
