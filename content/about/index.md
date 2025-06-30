@@ -22,11 +22,10 @@ Hey there, I'm Joe! I'm a software engineer, currently building
 at [Aruba Networks](https://www.arubanetworks.com/), Computer Science at
 [UC Berkeley](https://www.berkeley.edu/).
 
-I'm passionate about technology and deeply concerned about its ethical use. In
-our digitized world, public understanding of the software we depend on is
-crucial for a free and open society. I'm curious about the systems that make
-the world tick and always open to hear others' perspectives. Feel free to
-contact me via any of the methods below.
+It's my deep concern for the reliability, security, and responsible use of
+software that fuels my drive to keep learning. I'm curious about the systems
+that make the world tick and always open to hear others' perspectives. Feel
+free to contact me via any of the methods below.
 
 This website is primarily a place for me to organize my thoughts and share
 what I'm working on. If you'd like, take a peek at my blog and maybe you'll
