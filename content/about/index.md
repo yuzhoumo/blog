@@ -17,10 +17,10 @@ links:
     image: steam.png
 ---
 
-Hey there, I'm Joe! I'm a software engineer, currently building
-[AirKey](https://airkey.com/) at Capital One. Prev: systems software engineer
-at [Aruba Networks](https://www.arubanetworks.com/), Computer Science at
-[UC Berkeley](https://www.berkeley.edu/).
+Hey there, I'm Joe! I'm a software engineer at Microsoft. Prev:
+[AirKey](https://airkey.com/) at Capital One, embedded network switch
+applications at [Aruba Networks](https://www.arubanetworks.com/),
+Computer Science at [UC Berkeley](https://www.berkeley.edu/).
 
 It's my deep concern for the reliability, security, and responsible use of
 software that fuels my drive to keep learning. I'm curious about the systems
