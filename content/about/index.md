@@ -17,9 +17,9 @@ links:
     image: steam.png
 ---
 
-Hey there, I'm Joe! I'm a software engineer at Microsoft. Prev:
-[AirKey](https://airkey.com/) at Capital One, embedded network switch
-applications at [Aruba Networks](https://www.arubanetworks.com/),
+Hey there, I'm Joe! I'm a software engineer building [Global Secure Access](https://learn.microsoft.com/en-us/entra/global-secure-access/overview-what-is-global-secure-access)
+at Microsoft. Prev: [AirKey](https://airkey.com/) at Capital One, embedded
+network switch applications at [Aruba Networks](https://www.arubanetworks.com/),
 Computer Science at [UC Berkeley](https://www.berkeley.edu/).
 
 It's my deep concern for the reliability, security, and responsible use of
