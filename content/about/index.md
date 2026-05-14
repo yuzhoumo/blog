@@ -1,20 +1,5 @@
 ---
 title: about
-description: welcome to my corner of the web
-image: "sunset.png"
-links:
-  - title: YouTube Channel
-    description: Contains mostly old school projects and random videos
-    website: https://www.youtube.com/TheCreeperBrine
-    image: youtube.png
-  - title: Spotify Profile
-    description: My favorite genres are deep house, trance, techo, and lofi
-    website: https://open.spotify.com/user/ae4qzwqynu120mdqdg2h4s7ds
-    image: spotify.png
-  - title: Steam Profile
-    description: A testimate to the hours wasted in the  ~m e t a v e r s e~
-    website: https://steamcommunity.com/id/PerpetualPanda/
-    image: steam.png
 ---
 
 Hey there, I'm Joe! I'm a software engineer building [Global Secure Access](https://learn.microsoft.com/en-us/entra/global-secure-access/overview-what-is-global-secure-access)
@@ -30,6 +15,15 @@ free to contact me via any of the methods below.
 This website is primarily a place for me to organize my thoughts and share
 what I'm working on. If you'd like, take a peek at my blog and maybe you'll
 find something that interests you!
+
+### links
+
+- [Spotify](https://open.spotify.com/user/ae4qzwqynu120mdqdg2h4s7ds):
+   Dance to these playlists like nobody is watching!
+- [YouTube](https://www.youtube.com/TheCreeperBrine):
+   Watch the random videos I've uploaded to my channel
+- [Steam](https://steamcommunity.com/id/PerpetualPanda):
+   Witness all of the hours I've wasted...
 
 ### contact me
 

@@ -4,12 +4,12 @@ function setTheme(mode) {
   if (mode === "dark") {
     document.getElementById("darkModeStyle").disabled = false;
     document.getElementById("dark-mode-toggle").innerHTML =
-      "<i data-feather=\"sun\"></i>";
+      '<i data-feather="sun"></i>';
     feather.replace({ id: "dark-mode-toggle-icon" });
   } else if (mode === "light") {
     document.getElementById("darkModeStyle").disabled = true;
     document.getElementById("dark-mode-toggle").innerHTML =
-      "<i data-feather=\"moon\"></i>";
+      '<i data-feather="moon"></i>';
     feather.replace({ id: "dark-mode-toggle-icon" });
   }
 }
