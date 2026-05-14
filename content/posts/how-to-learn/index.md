@@ -2,7 +2,6 @@
 title: How to Learn
 description: Lessons learned from four years of univeristy
 date: 2023-01-19
-draft: true
 tags: [journal, philosophy, guide]
 ---
 
