@@ -5,7 +5,14 @@ image: "rooftop.png"
 ---
 
 #### Personal Projects
-
+- **[slogin](https://github.com/yuzhoumo/slogin)** _Python, FastAPI_
+  - Lightweight, opinionated alternative web client for SimpleLogin
+- **[mcrcon-go](https://github.com/yuzhoumo/mcrcon-go)** | _Go_
+  - A golang port of mcrcon with quality of life features
+- **[Schwab Autoinvest](https://github.com/yuzhoumo/schwab-autoinvest)** | _Python_
+  - Script for autoinvesting available funds based on pre-defined target allocation
+  - I set this to run automatically after paycheck direct deposit
+  - Disclaimer: Use at your own risk! I am not responsible for your financial loss :)
 - **[PiazzaBox](https://github.com/yuzhoumo/piazzabox) and [EdBox](https://github.com/yuzhoumo/edbox)** | _Python, AlpineJS_
   - I built these to archive my Berkeley coursework after graduating (and as an
 	excuse to learn AlpineJS) :P
@@ -28,15 +35,23 @@ image: "rooftop.png"
   - Made frontend contributions to uni.vote
   - Saves on transaction fees for Uniswap goverence voting
 
+#### Homelab Infrastructure as Code
+
+- **[Ingress](https://github.com/perpetualpanda/ingress)**
+  - Azure deployment files for DNS, main reverse proxy, and monitoring host
+- **[Containers](https://github.com/perpetualpanda/containers)**
+  - Docker compose configurations for self-hosted services
+- **[Services](https://github.com/perpetualpanda/service)**
+  - Ansible playbooks for deploying self-hosted services
+- **[Homepage](https://github.com/perpetualpanda/homepage)**
+  - Public landing page for homelab domain (ppanda.org)
+
 #### Automation and Dev Tools
 
-- **[Homelab IaC](https://github.com/perpetualpanda/infra)**
-  - Infrastructure as code for my homelab vm and Docker container deployments
-- **[Reverse Proxy Playbook](https://github.com/yuzhoumo/ansible-reverse-proxy)**
-  - Ansible playbook for provisioning a hardened reverse proxy on an OpenBSD host
-  - Note: I recommend using this in tandem with Tailscale access control lists!
 - **[Dotfiles](https://github.com/yuzhoumo/dotfiles)**
   - Personal configurations for kitty, zsh, neovim, tmux, and git
+- **[NixOS Configurations](https://github.com/yuzhoumo/nixos)**
+  - Multi-host nixos configurations
 - **[macOS Provisioning Scripts](https://github.com/yuzhoumo/macos-configs)**
   - Idempotent scripts for setting up a fresh install of macOS
   - Applies app installs, personalizations, and privacy/security tweaks
@@ -44,8 +59,9 @@ image: "rooftop.png"
   - Idempotent scripts for setting up a fresh install of OpenSUSE
 - **[Windows Provisioning Scripts](https://github.com/yuzhoumo/windows-configs)**
   - Scripts for setting up a fresh install of Windows (work in progress)
-- **[NixOS Configurations](https://github.com/yuzhoumo/nixos-configs)**
-  - Multi-host nixos configurations (work in progress)
+- **[Reverse Proxy Playbook](https://github.com/yuzhoumo/ansible-reverse-proxy)**
+  - Ansible playbook for provisioning a hardened reverse proxy on an OpenBSD host
+  - Note: I recommend using this in tandem with Tailscale access control lists!
 
 #### Puzzles/Challenges
 
